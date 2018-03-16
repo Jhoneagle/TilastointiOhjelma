@@ -1,1 +1,1 @@
-"web: gunicorn runserver:app" 
+"web: gunicorn __init__:app" 
