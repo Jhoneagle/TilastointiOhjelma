@@ -31,22 +31,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="runserver.py" />
-    <Compile Include="TilastointiOhjelma\__init__.py" />
-    <Compile Include="TilastointiOhjelma\control.py" />
+    <Compile Include="application\__init__.py" />
+    <Compile Include="application\control.py" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TilastointiOhjelma\" />
-    <Folder Include="TilastointiOhjelma\static\" />
-    <Folder Include="TilastointiOhjelma\static\content\" />
-    <Folder Include="TilastointiOhjelma\static\fonts\" />
-    <Folder Include="TilastointiOhjelma\static\scripts\" />
-    <Folder Include="TilastointiOhjelma\templates\" />
+    <Folder Include="application\" />
+    <Folder Include="application\static\" />
+    <Folder Include="application\static\content\" />
+    <Folder Include="application\static\fonts\" />
+    <Folder Include="application\static\scripts\" />
+    <Folder Include="application\templates\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
-    <Content Include="TilastointiOhjelma\templates\demo.html" />
-    <Content Include="TilastointiOhjelma\templates\index.html" />
-    <Content Include="TilastointiOhjelma\templates\layout.html" />
+    <Content Include="application\templates\demo.html" />
+    <Content Include="application\templates\index.html" />
+    <Content Include="application\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="venv\">

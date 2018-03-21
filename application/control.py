@@ -1,7 +1,8 @@
 """ routes """
 
 from flask import render_template
-from TilastointiOhjelma import app
+from application import app
+import application
 
 class Item:
     def __init__(self, name):

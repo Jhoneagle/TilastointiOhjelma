@@ -1,7 +1,8 @@
 """ server runner """
 
 from os import environ
-from TilastointiOhjelma import app
+from application import app
+import application
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')
