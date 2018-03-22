@@ -36,6 +36,9 @@
     <Compile Include="application\visits\views.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="application\visits\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="application\__init__.py" />
     <Compile Include="application\control.py" />
