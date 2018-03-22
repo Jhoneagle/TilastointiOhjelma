@@ -30,12 +30,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="application\webdata\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="application\__init__.py" />
     <Compile Include="application\control.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="application\" />
+    <Folder Include="application\webdata\" />
     <Folder Include="application\static\" />
     <Folder Include="application\static\content\" />
     <Folder Include="application\static\fonts\" />
