@@ -1,0 +1,20 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>Osoite</th>
+        <th>lukumaara</th>
+    </tr>
+    {% for visit in visits %}
+    <tr>
+        <td>{{ visit.osoite }}</td>
+        <td>{{ visit.lukumaara }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+{% endblock %}

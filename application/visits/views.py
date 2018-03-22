@@ -8,7 +8,7 @@ def visits_form():
 
 @app.route("/visits/", methods=["POST"])
 def visits_create():
-    v = Visit(osoite=request.form.get("osoite"), kuukausi=request.form.get("kuukausi"), vuosi=request.form.get("vuosi"))
+    v = Visit(osoite=request.form.get("osoite"), kuukausi=request.form.get("kuukausi"), vuosi=request.form.get("vuosi"), lukumaara=request.form.get("lukumaara"))
     db.session().add(v)
     db.session().commit()
 
@@ -16,4 +16,12 @@ def visits_create():
 
 @app.route("/visits", methods=["GET"])
 def visit_index():
-    return render_template("visits/list.html", title="All visits", visits = Visit.query.all())
+    return render_template("visits/list.html", title="Visit listing")
+
+@app.route("/result/", methods=["GET", "POST"])
+def visits_result():
+    if request.method == 'POST':
+        result = db.engine.execute("SELECT * FROM Visit WHERE kuukausi = :month AND vuosi = :year", {'month':request.form.get("kuukausi"), 'year':request.form.get("vuosi")})
+        return render_template("visits/result.html", title="Result", visits=result)
+    else:
+        return render_template("visits/result.html", title="Result")

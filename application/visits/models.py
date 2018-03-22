@@ -5,8 +5,10 @@ class Visit(db.Model):
     osoite = db.Column(db.String(144), nullable=False)
     kuukausi = db.Column(db.Integer, nullable=False)
     vuosi = db.Column(db.Integer, nullable=False)
+    lukumaara = db.Column(db.Integer, nullable=False)
 
-def __init__(self, osoite, kuukausi, vuosi):
+def __init__(self, osoite, kuukausi, vuosi, lukumaara):
     self.osoite = osoite
     self.kuukausi = kuukausi
     self.vuosi = vuosi
+    self.lumaara = lukumaara

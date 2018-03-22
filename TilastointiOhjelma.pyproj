@@ -56,6 +56,7 @@
   <ItemGroup>
     <Content Include="application\templates\visits\list.html" />
     <Content Include="application\templates\visits\new.html" />
+    <Content Include="application\templates\visits\result.html" />
     <Content Include="requirements.txt" />
     <Content Include="application\templates\demo.html" />
     <Content Include="application\templates\index.html" />
