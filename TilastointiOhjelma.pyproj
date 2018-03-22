@@ -30,7 +30,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="application\webdata\models.py">
+    <Compile Include="application\visits\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\visits\views.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="runserver.py" />
@@ -39,7 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="application\" />
-    <Folder Include="application\webdata\" />
+    <Folder Include="application\templates\visits\" />
+    <Folder Include="application\visits\" />
     <Folder Include="application\static\" />
     <Folder Include="application\static\content\" />
     <Folder Include="application\static\fonts\" />
@@ -47,6 +51,8 @@
     <Folder Include="application\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="application\templates\visits\list.html" />
+    <Content Include="application\templates\visits\new.html" />
     <Content Include="requirements.txt" />
     <Content Include="application\templates\demo.html" />
     <Content Include="application\templates\index.html" />

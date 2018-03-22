@@ -2,7 +2,6 @@
 
 from os import environ
 from application import app
-import application
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')

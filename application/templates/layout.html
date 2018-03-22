@@ -8,6 +8,11 @@
 
 <body>
     
+    <ul>
+        <li><a href="{{ url_for('visit_index') }}">List visits</a></li>
+        <li><a href="{{ url_for('visits_form') }}">Add a visit</a></li>
+    </ul>
+
         {% block content %}{% endblock %}
 
 </body>

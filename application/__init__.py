@@ -11,6 +11,7 @@ db = SQLAlchemy(app)
 
 import application.control
 
-from application.webdata import models
+from application.visits import models
+from application.visits import views
 
 db.create_all()

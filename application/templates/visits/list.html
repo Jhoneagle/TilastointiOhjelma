@@ -1,0 +1,22 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>Osoite</th>
+        <th>Kuukausi</th>
+        <th>Vuosi</th>
+    </tr>
+    {% for visit in visits %}
+    <tr>
+        <td>{{ visit.osoite }}</td>
+        <td>{{ visit.kuukausi }}</td>
+        <td>{{ visit.vuosi }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+{% endblock %}

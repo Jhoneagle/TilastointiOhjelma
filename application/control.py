@@ -2,7 +2,6 @@
 
 from flask import render_template
 from application import app
-import application
 
 class Item:
     def __init__(self, name):

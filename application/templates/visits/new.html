@@ -1,0 +1,14 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+<form method="POST" action="{{ url_for('visits_create') }}">
+    <p>osoite: </p><input type="text" name="osoite" />
+    <p>kuukausi: </p><input type="number" name="kuukausi" />
+    <p>vuosi: </p><input type="number" name="vuosi" />
+    <input type="submit" value="Add a new visit" />
+</form>
+{% endblock %}
+
+{% endblock %}
