@@ -15,6 +15,23 @@
     </tr>
     {% endfor %}
 </table>
+<p>
+
+    vuosi johon verrataan: 
+
+</p>
+<table>
+    <tr>
+        <th>Osoite</th>
+        <th>lukumaara</th>
+    </tr>
+    {% for visit in visits2 %}
+    <tr>
+        <td>{{ visit.osoite }}</td>
+        <td>{{ visit.lukumaara }}</td>
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}
 
 {% endblock %}

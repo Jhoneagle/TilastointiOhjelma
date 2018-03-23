@@ -22,6 +22,7 @@ def visit_index():
 def visits_result():
     if request.method == 'POST':
         result = db.engine.execute("SELECT * FROM Visit WHERE kuukausi = :month AND vuosi = :year", {'month':request.form.get("kuukausi"), 'year':request.form.get("vuosi")})
-        return render_template("visits/result.html", title="Result", visits=result)
+        result2 = db.engine.execute("SELECT * FROM Visit WHERE kuukausi = :month AND vuosi = :year", {'month':request.form.get("kuukausi"), 'year':request.form.get("vuosi2")})
+        return render_template("visits/result.html", title="Result", visits=result, visits2=result2)
     else:
         return render_template("visits/result.html", title="Result")
