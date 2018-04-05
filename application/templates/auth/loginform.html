@@ -1,0 +1,39 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+
+<li><a href="{{ url_for('auth_register') }}">haven't register?</a></li>
+
+{{ error }}
+<form method="POST" action="{{ url_for('auth_login') }}">
+    {{ form.hidden_tag() }}
+    <table>
+        <tr>
+            <td>
+                {{ form.username.label }}
+            </td>
+            <td>
+                {{ form.username }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form.password.label }}
+            </td>
+            <td>
+                {{ form.password }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Login" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}
+
+{% endblock %}

@@ -30,6 +30,27 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="application\auth\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\auth\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\auth\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\auth\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\sivu\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\sivu\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\visits\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="application\visits\models.py">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="application\" />
+    <Folder Include="application\auth\" />
+    <Folder Include="application\sivu\" />
+    <Folder Include="application\templates\auth\" />
     <Folder Include="application\templates\visits\" />
     <Folder Include="application\visits\" />
     <Folder Include="application\static\" />
@@ -54,6 +78,8 @@
     <Folder Include="application\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="application\templates\auth\loginform.html" />
+    <Content Include="application\templates\auth\registerform.html" />
     <Content Include="application\templates\visits\list.html" />
     <Content Include="application\templates\visits\new.html" />
     <Content Include="application\templates\visits\result.html" />
