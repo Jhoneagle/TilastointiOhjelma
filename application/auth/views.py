@@ -79,4 +79,4 @@ def auth_delete():
 @app.route("/auth/companys")
 def companys():
     result = db.engine.execute("SELECT company FROM account")
-return render_template("auth/companys.html", companys=result)
+    return render_template("auth/companys.html", companys=result)
