@@ -51,7 +51,7 @@ def visit_index():
 @login_required
 def visits_result():
     if request.method == 'POST':
-        form = ListForm(request.form)  
+        form = ListForm(request.form)
         result = db.engine.execute("SELECT * FROM visit, sivu WHERE visit.kuukausi = :month AND visit.vuosi = :year AND visit.sivu_id = sivu.id AND sivu.account_id = :id", {'month':form.kuukausi.data, 'year':form.vuosi.data, 'id':current_user.id})
         result2 = db.engine.execute("SELECT * FROM visit, sivu WHERE visit.kuukausi = :month AND visit.vuosi = :year AND visit.sivu_id = sivu.id AND sivu.account_id = :id", {'month':form.kuukausi.data, 'year':form.vuosi2.data, 'id':current_user.id})
         return render_template("visits/result.html", title="Result", visits=result, visits2=result2)

@@ -9,7 +9,7 @@ class Sivu(db.Model):
     
     account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)   
 
-    visit = db.relationship("Visit", backref='sivu', lazy=True)
+    visit = db.relationship("Visit", backref='sivu')
 
     def __init__(self, osoite):
         self.osoite = osoite
