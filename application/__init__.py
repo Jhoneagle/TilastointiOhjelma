@@ -10,6 +10,7 @@ if os.environ.get("HEROKU"):
 else:
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///webdata.db"    
     app.config["SQLALCHEMY_ECHO"] = True
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
