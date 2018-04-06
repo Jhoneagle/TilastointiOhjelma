@@ -1,10 +1,11 @@
-﻿{% extends "layout.html" %}
+{% extends "layout.html" %}
 
 {% block content %}
 
 {% block body %}
 
-<form method="POST" action="{{ url_for('auth_register') }}">
+{{ error }}
+<form method="POST" action="{{ url_for('auth_personal') }}">
     {{ form.hidden_tag() }}
     <table>
         <tr>
@@ -22,22 +23,6 @@
                 </ul>
             </td>
         </tr>
-
-        <tr>
-            <td>
-                {{ form.username.label }}
-            </td>
-            <td>
-                {{ form.username }}
-            </td>
-        </tr>
-        <td>
-            <ul>
-                {% for error in form.username.errors %}
-                <li>{{ error }}</li>
-                {% endfor %}
-            </ul>
-        </td>
         <tr>
             <td>
                 {{ form.password.label }}
@@ -55,7 +40,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" value="register" />
+                <input type="submit" value="update" />
             </td>
         </tr>
     </table>

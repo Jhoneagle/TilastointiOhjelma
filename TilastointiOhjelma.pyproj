@@ -79,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="application\templates\auth\loginform.html" />
+    <Content Include="application\templates\auth\personal.html">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="application\templates\auth\registerform.html" />
     <Content Include="application\templates\visits\list.html" />
     <Content Include="application\templates\visits\new.html" />

@@ -10,4 +10,8 @@ class RegisterForm(FlaskForm):
     name =  StringField("nimi",[validators.length(1, 1000, "lisää nimi")])
     username = StringField("Username",[validators.length(1, 1000, "lisää tunnus")])
     password = PasswordField("Password",[validators.length(1, 1000, "lisää salasana")])
+
+class PersonalForm(FlaskForm):
+    name =  StringField("nimi",[validators.length(1, 1000, "lisää nimi")])
+    password = StringField("Password",[validators.length(1, 1000, "lisää salasana")])
     
