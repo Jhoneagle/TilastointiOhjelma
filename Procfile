@@ -1,1 +1,1 @@
-web: gunicorn -w 1 :app --preload
+web: gunicorn runserver:app --preload
