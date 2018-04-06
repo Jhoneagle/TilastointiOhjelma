@@ -25,6 +25,66 @@
         </tr>
         <tr>
             <td>
+                {{ form.phonenumber.label }}
+            </td>
+            <td>
+                {{ form.phonenumber }}
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.phonenumber.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form.email.label }}
+            </td>
+            <td>
+                {{ form.email }}
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.email.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form.company.label }}
+            </td>
+            <td>
+                {{ form.company }}
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.company.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{ form.address.label }}
+            </td>
+            <td>
+                {{ form.address }}
+            </td>
+            <td>
+                <ul>
+                    {% for error in form.address.errors %}
+                    <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
                 {{ form.password.label }}
             </td>
             <td>
@@ -45,6 +105,8 @@
         </tr>
     </table>
 </form>
+
+<li><a href="{{ url_for('auth_delete') }}">remove account?</a></li>
 
 {% endblock %}
 

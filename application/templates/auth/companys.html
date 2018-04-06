@@ -1,0 +1,18 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+<table>
+    <tr>
+        <th>Yrityksen nimi</th>
+    </tr>
+    {% for company in companys %}
+    <tr>
+        <td>{{ company.company }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
+
+{% endblock %}

@@ -1,6 +1,7 @@
 """ initialiser """
 
 from flask import Flask
+import os
 app = Flask(__name__)
 
 from flask_sqlalchemy import SQLAlchemy

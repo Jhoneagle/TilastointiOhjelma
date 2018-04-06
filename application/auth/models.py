@@ -10,13 +10,25 @@ class User(db.Model):
                               onupdate=db.func.current_timestamp())
 
     name = db.Column(db.String(144), nullable=False)
+    phonenumber = db.Column(db.String(144), nullable=False)
+    email = db.Column(db.String(144), nullable=False)
+
+    company = db.Column(db.String(144), nullable=False)
+    address = db.Column(db.String(144), nullable=False)
+
     username = db.Column(db.String(144), nullable=False)
     password = db.Column(db.String(144), nullable=False)
 
     sivu = db.relationship("Sivu", backref='account', lazy=True)    
 
-    def __init__(self, name, username, password):
+    def __init__(self, name, phone, email, company, address, username, password):
         self.name = name
+        self.phonenumber = phone
+        self.email = email
+
+        self.company = company
+        self.address = address
+
         self.username = username
         self.password = password
   

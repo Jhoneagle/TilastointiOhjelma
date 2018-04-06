@@ -78,6 +78,7 @@
     <Folder Include="application\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="application\templates\auth\companys.html" />
     <Content Include="application\templates\auth\loginform.html" />
     <Content Include="application\templates\auth\personal.html">
       <SubType>Code</SubType>

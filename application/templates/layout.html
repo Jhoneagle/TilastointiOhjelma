@@ -12,7 +12,7 @@
     <p>
         Kirjautunut nimellä {{ current_user.name }} <a href="{{ url_for('auth_logout') }}">Kirjaudu ulos</a>
 
-        <a href="{{ url_for('auth_personal') }}">edit account</a>
+        or <a href="{{ url_for('auth_personal') }}">edit account</a>
     </p>
     {% else %}
     <a href="{{ url_for('auth_login') }}">Kirjaudu</a>
@@ -21,6 +21,7 @@
     <ul>
         <li><a href="{{ url_for('visit_index') }}">List visits</a></li>
         <li><a href="{{ url_for('visits_form') }}">Add a visit</a></li>
+        <li><a href="{{ url_for('companys') }}">Yritykset</a></li>
     </ul>
 
     {% block content %}{% endblock %}
