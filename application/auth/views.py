@@ -49,13 +49,8 @@ def auth_personal():
         newform = PersonalForm(request.form)
         if not newform.validate():
             return render_template("auth/registerform.html", form = form)
-        user = User.query.filter_by(id=current_user.id).first()
-        username = user.username
-        db.session.delete(user)
-        db.session.commit()
-        user = User(newform.name.data, newform.phonenumber.data, newform.email.data, newform.company.data, newform.address.data, username, newform.password.data)
-        db.session().add(user)
-        db.session().commit()
+        db.engine.execute("UPDATE account SET name = :name, phonenumber = :number, email = :email, company = :company, address = :address, password = :password WHERE id = :id", 
+{'name':newform.name.data, 'number':newform.phonenumber.data, 'email':newform.email.data, 'company':newform.company.data, 'address':newform.address.data, 'password':newform.password.data, 'id':current_user.id})
         return redirect(url_for("home"))
 
     form = PersonalForm();
@@ -75,13 +70,13 @@ def auth_personal():
 @app.route("/auth/delete")
 @login_required
 def auth_delete():
-    user = User.query.filter_by(id=current_user.id).first()
-    db.session.delete(user)
-    db.session.commit()
+    id = current_user.id
     logout_user()
+
+    db.engine.execute("DELETE FROM account WHERE id = :id", {'id':id})
     return redirect(url_for("home"))
 
 @app.route("/auth/companys")
 def companys():
     result = db.engine.execute("SELECT company FROM account")
-    return render_template("auth/companys.html", companys=result)
+return render_template("auth/companys.html", companys=result)
