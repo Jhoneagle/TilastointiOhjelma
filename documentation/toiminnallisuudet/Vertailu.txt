@@ -1,7 +1,9 @@
-Ker‰tty pitk‰‰n monien kuukausien edest‰ vuosien ajalta tietoa kuinka monta kertaa sivuston kaikilla sivuilla on k‰yty. Kun n‰m‰ on lis‰tty tietokantaan lis‰ys ominaisuuden kuatta, niin voidaan vertailla eri vuosien k‰yntim‰‰ri‰ saman kuukauden aikana. 
+Ker√§tty pitk√§√§n monien kuukausien edest√§ vuosien ajalta tietoa kuinka monta kertaa sivuston kaikilla sivuilla on k√§yty. Kun n√§m√§ on lis√§tty tietokantaan lis√§ys ominaisuuden kuatta, niin voidaan vertailla eri vuosien k√§yntim√§√§ri√§ saman kuukauden aikana. 
 
-T‰rkeint‰ vertailusta saatava hyˆty on, ett‰ sivujen haltija pystyy n‰kem‰‰n kuinka kuinka niiden sivujen k‰yntim‰‰r‰t ovat kehittyneet valittujen vuosien kysytyn kuukauden osalta. Halutaan tiet‰‰ vuoden tai useamman v‰linen kehitys kuukauden k‰ynneiss‰. Mist‰ voi olla paljon hyˆty‰ yritykselle.
+T√§rkeint√§ vertailusta saatava hy√∂ty on, ett√§ sivujen haltija pystyy n√§kem√§√§n kuinka kuinka niiden sivujen k√§yntim√§√§r√§t ovat kehittyneet valittujen vuosien kysytyn kuukauden osalta. Halutaan tiet√§√§ vuoden tai useamman v√§linen kehitys kuukauden k√§ynneiss√§. Mist√§ voi olla paljon hy√∂ty√§ yritykselle.
 
-Esimerkiksi jos ensimm‰isen‰ vuonna k‰vij‰m‰‰r‰ on ollut 300-500 sivuilla ja toisena kaikissa on ollut samassa kuussa 500-700. Niin sivujen haltija pystyy t‰st‰ p‰‰ttelem‰‰n, ett‰ sivujen jatkokehitys ja/tai markkinointi on tuottanut tulosta ja ihmiset ovat olleet halukkaampia k‰yd‰ enemm‰n sivuilla. 
+Esimerkiksi jos ensimm√§isen√§ vuonna k√§vij√§m√§√§r√§ on ollut 300-500 sivuilla ja toisena kaikissa on ollut samassa kuussa 500-700. Niin sivujen haltija pystyy t√§st√§ p√§√§ttelem√§√§n, ett√§ sivujen jatkokehitys ja/tai markkinointi on tuottanut tulosta ja ihmiset ovat olleet halukkaampia k√§yd√§ enemm√§n sivuilla. 
 
-Myˆs, jos yhden onkin pudonnut ja jonkin kasvanut. T‰llˆin voidaan n‰hd‰, ett‰ jossain on onnistuttu, mutta myˆs jokin on mennyt syteen.
+My√∂s, jos yhden onkin pudonnut ja jonkin kasvanut. T√§ll√∂in voidaan n√§hd√§, ett√§ jossain on onnistuttu, mutta my√∂s jokin on mennyt syteen.
+
+Henkil√∂t n√§kev√§t vain omat visit datat.
