@@ -49,7 +49,7 @@ def auth_personal():
         newform = PersonalForm(request.form)
         if not newform.validate():
             return render_template("auth/registerform.html", form = form)
-        user = User.query.filter_by(id=current_user.id).first()
+        user = User.query.filter(id==current_user.id).first()
         username = user.username
         db.session.delete(user)
         db.session.commit()
@@ -59,7 +59,7 @@ def auth_personal():
         return redirect(url_for("home"))
 
     form = PersonalForm();
-    info = User.query.filter_by(id=current_user.id).first()
+    info = User.query.filter(id==current_user.id).first()
 
     form.name.data = info.name
     form.phonenumber.data = info.phonenumber
@@ -75,7 +75,7 @@ def auth_personal():
 @app.route("/auth/delete")
 @login_required
 def auth_delete():
-    user = User.query.filter_by(id=current_user.id).first()
+    user = User.query.filter(id==current_user.id).first()
     db.session.delete(user)
     db.session.commit()
     logout_user()
