@@ -49,7 +49,7 @@ def auth_personal():
         newform = PersonalForm(request.form)
         if not newform.validate():
             return render_template("auth/registerform.html", form = form)
-        user = User.query.filter_by(id==current_user.id).first()
+        user = User.query.filter_by(id=current_user.id).first()
         username = user.username
         db.session.delete(user)
         db.session.commit()
