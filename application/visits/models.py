@@ -1,10 +1,10 @@
 from application import db
+from application.models import Base
 
-class Visit(db.Model):
+class Visit(Base):
     
     __tablename__ = "visit"
 
-    id = db.Column(db.Integer, primary_key=True)
     kuukausi = db.Column(db.Integer, nullable=False)
     vuosi = db.Column(db.Integer, nullable=False)
     lukumaara = db.Column(db.Integer, nullable=False)

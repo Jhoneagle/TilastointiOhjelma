@@ -42,6 +42,9 @@
     <Compile Include="application\auth\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="application\models.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="application\sivu\models.py">
       <SubType>Code</SubType>
     </Compile>

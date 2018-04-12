@@ -1,13 +1,13 @@
 from application import db
+from application.models import Base
 
-class Sivu(db.Model):
+class Sivu(Base):
     
     __tablename__ = "sivu"
 
-    id = db.Column(db.Integer, primary_key=True)
     osoite = db.Column(db.String(144), nullable=False)
-    
-    account_id = db.Column(db.Integer, nullable=False)   
+    account_id = db.Column(db.Integer, nullable=False)
+    ryhma = db.Column(db.String(144), nullable=False)
 
     visit = db.relationship("Visit", backref='sivu')
 
