@@ -4,6 +4,7 @@ from application import app, db
 from application.auth.models import User
 from application.auth.forms import LoginForm, RegisterForm, PersonalForm
 from flask_login.utils import login_user, logout_user, login_required, current_user
+from sqlalchemy.sql import text
 
 @app.route("/auth/login", methods = ["GET", "POST"])
 def auth_login():
