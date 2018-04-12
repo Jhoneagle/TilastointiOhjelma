@@ -78,7 +78,6 @@ def auth_delete():
     logout_user()
     
     stmt = text("DELETE FROM account WHERE id = :id").params(id=id)
-    
     db.engine.execute(stmt)
     return redirect(url_for("home"))
 

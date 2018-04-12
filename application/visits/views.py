@@ -5,6 +5,7 @@ from application.visits.forms import VisitForm, ListForm
 from flask_login.utils import login_required, current_user
 from application.sivu.models import Sivu
 from application.auth.models import User
+from sqlalchemy.sql import text
 
 @app.route("/visits/new/")
 @login_required
