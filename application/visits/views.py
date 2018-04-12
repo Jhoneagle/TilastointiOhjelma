@@ -52,8 +52,11 @@ def visit_index():
 def visits_result():
     if request.method == 'POST':
         form = ListForm(request.form)
-        result = db.engine.execute("SELECT * FROM visit, sivu WHERE visit.kuukausi = :month AND visit.vuosi = :year AND visit.sivu_id = sivu.id AND sivu.account_id = :id", {'month':form.kuukausi.data, 'year':form.vuosi.data, 'id':current_user.id})
-        result2 = db.engine.execute("SELECT * FROM visit, sivu WHERE visit.kuukausi = :month AND visit.vuosi = :year AND visit.sivu_id = sivu.id AND sivu.account_id = :id", {'month':form.kuukausi.data, 'year':form.vuosi2.data, 'id':current_user.id})
+        stmt = text("SELECT * FROM visit, sivu WHERE visit.kuukausi = :month AND visit.vuosi = :year AND visit.sivu_id = sivu.id AND sivu.account_id = :id").params(month=form.kuukausi.data, year=form.vuosi.data, id=current_user.id)
+        stmt2 = text("SELECT * FROM visit, sivu WHERE visit.kuukausi = :month AND visit.vuosi = :year AND visit.sivu_id = sivu.id AND sivu.account_id = :id").params(month=form.kuukausi.data, year=form.vuosi2.data, id=current_user.id)
+
+        result = db.engine.execute(stmt)
+        result2 = db.engine.execute(stmt2)
         return render_template("visits/result.html", title="Result", visits=result, visits2=result2)
     else:
         return render_template("visits/result.html", title="Result")

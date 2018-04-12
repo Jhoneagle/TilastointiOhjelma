@@ -49,8 +49,11 @@ def auth_personal():
         newform = PersonalForm(request.form)
         if not newform.validate():
             return render_template("auth/registerform.html", form = form)
-        db.engine.execute("UPDATE account SET name = :name, phonenumber = :number, email = :email, company = :company, address = :address, password = :password WHERE id = :id", 
-{'name':newform.name.data, 'number':newform.phonenumber.data, 'email':newform.email.data, 'company':newform.company.data, 'address':newform.address.data, 'password':newform.password.data, 'id':current_user.id})
+        stmt = text("UPDATE account SET name = :name, phonenumber = :number, email = :email, company = :company, address = :address, password = "+
+":password WHERE id = :id").params(name=newform.name.data, number=newform.phonenumber.data, email=newform.email.data, 
+company=newform.company.data, address=newform.address.data, password=newform.password.data, id=current_user.id)
+
+        db.engine.execute(stmt)
         return redirect(url_for("home"))
 
     form = PersonalForm();
@@ -72,8 +75,10 @@ def auth_personal():
 def auth_delete():
     id = current_user.id
     logout_user()
-
-    db.engine.execute("DELETE FROM account WHERE id = :id", {'id':id})
+    
+    stmt = text("DELETE FROM account WHERE id = :id").params(id=id)
+    
+    db.engine.execute(stmt)
     return redirect(url_for("home"))
 
 @app.route("/auth/companys")
