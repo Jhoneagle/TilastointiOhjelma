@@ -4,7 +4,6 @@ from application.visits.models import Visit
 from application.visits.forms import VisitForm, ListForm
 from flask_login.utils import login_required, current_user
 from application.sivu.models import Sivu
-from application.auth.models import User
 from sqlalchemy.sql import text
 
 @app.route("/visits/new/")
@@ -25,7 +24,7 @@ def visits_create():
     sivuId = None
 
     if result is None:
-        s = Sivu(form.osoite.data)
+        s = Sivu(form.osoite.data, form.osoiteRyhma.data)
         s.account_id = current_user.id
         db.session.add(s)
         db.session.commit()

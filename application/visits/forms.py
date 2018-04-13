@@ -4,6 +4,7 @@ from wtforms import validators, ValidationError
 
 class VisitForm(FlaskForm):
     osoite = TextField("osoite: ",[validators.length(1, 1000, "lisää osoite")])
+    osoiteRyhma = TextField("sivusto ryhmä: ",[validators.length(1, 1000, "lisää ryhmä")])
 
     lukumaara = IntegerField("lukumaara: ",[validators.NumberRange(0, 1000000, "Pitää olla suurempi, kuin 0")])
 

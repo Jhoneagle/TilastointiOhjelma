@@ -11,5 +11,6 @@ class Sivu(Base):
 
     visit = db.relationship("Visit", backref='sivu')
 
-    def __init__(self, osoite):
+    def __init__(self, osoite, osoiteRyhma):
         self.osoite = osoite
+        self.ryhma = osoiteRyhma

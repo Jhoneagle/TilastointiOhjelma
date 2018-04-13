@@ -1,0 +1,28 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+
+<form method="POST" action="{{ url_for('yhteenveto_vuodessa') }}">
+
+    <table>
+        <tr>
+            <td>
+                {{ form.vuosi.label }}
+            </td>
+            <td>
+                {{ form.vuosi }}
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="näytä tulos" />
+            </td>
+        </tr>
+    </table>
+</form>
+
+{% endblock %}
+
+{% endblock %}

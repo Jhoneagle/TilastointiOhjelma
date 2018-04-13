@@ -63,6 +63,15 @@
     <Compile Include="application\visits\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="application\yhteenveto\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\yhteenveto\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\yhteenveto\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="runserver.py" />
     <Compile Include="application\__init__.py" />
     <Compile Include="application\control.py" />
@@ -72,6 +81,7 @@
     <Folder Include="application\auth\" />
     <Folder Include="application\sivu\" />
     <Folder Include="application\templates\auth\" />
+    <Folder Include="application\templates\yhteenveto\" />
     <Folder Include="application\templates\visits\" />
     <Folder Include="application\visits\" />
     <Folder Include="application\static\" />
@@ -79,6 +89,7 @@
     <Folder Include="application\static\fonts\" />
     <Folder Include="application\static\scripts\" />
     <Folder Include="application\templates\" />
+    <Folder Include="application\yhteenveto\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="application\templates\auth\companys.html" />
@@ -90,6 +101,11 @@
     <Content Include="application\templates\visits\list.html" />
     <Content Include="application\templates\visits\new.html" />
     <Content Include="application\templates\visits\result.html" />
+    <Content Include="application\templates\yhteenveto\kyselyryhmassa.html" />
+    <Content Include="application\templates\yhteenveto\ryhmassa.html" />
+    <Content Include="application\templates\yhteenveto\vuodessa.html" />
+    <Content Include="application\templates\yhteenveto\kyselyvuodessa.html" />
+    <Content Include="application\templates\yhteenveto\valinta.html" />
     <Content Include="requirements.txt" />
     <Content Include="application\templates\demo.html" />
     <Content Include="application\templates\index.html" />

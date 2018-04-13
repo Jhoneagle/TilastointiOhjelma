@@ -1,0 +1,23 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+
+<table>
+    <tr>
+        <th>Osoite</th>
+        <th>kokonais lukumaara vuoden aikana</th>
+    </tr>
+    {% for tulos in vuosi %}
+    <tr>
+        <td>{{ tulos.osoite }}</td>
+        <td>{{ tulos.maara }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<p>
+
+    {% endblock %}
+
+    {% endblock %}
