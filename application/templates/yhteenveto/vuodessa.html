@@ -4,20 +4,25 @@
 
 {% block body %}
 
-<table>
-    <tr>
-        <th>Osoite</th>
-        <th>kokonais lukumaara vuoden aikana</th>
-    </tr>
-    {% for tulos in vuosi %}
-    <tr>
-        <td>{{ tulos.osoite }}</td>
-        <td>{{ tulos.maara }}</td>
-    </tr>
-    {% endfor %}
+<h2>Sivujen vuotinen yhteenveto</h2>
+
+<table class="table">
+    <thead thead-light>
+        <tr>
+            <th>Osoite</th>
+            <th>kokonais lukumaara vuoden aikana</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tulos in vuosi %}
+        <tr>
+            <td>{{ tulos.osoite }}</td>
+            <td>{{ tulos.maara }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
-<p>
 
-    {% endblock %}
+{% endblock %}
 
-    {% endblock %}
+{% endblock %}

@@ -3,16 +3,13 @@
 {% block content %}
 
 {% block body %}
-<table>
-    <tr>
-        <th>Yrityksen nimi</th>
-    </tr>
+<h2>Yritysten nimet</h2>
+
+<ul class="list-group">
     {% for company in companys %}
-    <tr>
-        <td>{{ company.company }}</td>
-    </tr>
+    <li class="list-group-item"> {{ company.company }} </li>
     {% endfor %}
-</table>
+</ul>
 {% endblock %}
 
 {% endblock %}

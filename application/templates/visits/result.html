@@ -3,34 +3,43 @@
 {% block content %}
 
 {% block body %}
-<table>
-    <tr>
-        <th>Osoite</th>
-        <th>lukumaara</th>
-    </tr>
-    {% for visit in visits %}
-    <tr>
-        <td>{{ visit.osoite }}</td>
-        <td>{{ visit.lukumaara }}</td>
-    </tr>
-    {% endfor %}
+
+<h2>Listauksen tulos</h2>
+
+<table class="table">
+    <thead thead-light>
+        <tr>
+            <th scope="col">Osoite</th>
+            <th scope="col">lukumaara</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for visit in visits %}
+        <tr>
+            <td>{{ visit.osoite }}</td>
+            <td>{{ visit.lukumaara }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
-<p>
 
-    vuosi johon verrataan: 
+<br /><p>vuosi johon verrataan: </p><br />
 
-</p>
-<table>
-    <tr>
-        <th>Osoite</th>
-        <th>lukumaara</th>
-    </tr>
-    {% for visit in visits2 %}
-    <tr>
-        <td>{{ visit.osoite }}</td>
-        <td>{{ visit.lukumaara }}</td>
-    </tr>
-    {% endfor %}
+<table class="table">
+    <thead thead-light>
+        <tr>
+            <th scope="col">Osoite</th>
+            <th scope="col">lukumaara</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for visit in visits2 %}
+        <tr>
+            <td>{{ visit.osoite }}</td>
+            <td>{{ visit.lukumaara }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
 </table>
 {% endblock %}
 

@@ -42,7 +42,28 @@
     <Compile Include="application\auth\__init__.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="application\kavijat\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\kavijat\views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\kavijat\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\kayttis\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\kayttis\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="application\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\selain\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\selain\__init__.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="application\sivu\models.py">
@@ -79,13 +100,16 @@
   <ItemGroup>
     <Folder Include="application\" />
     <Folder Include="application\auth\" />
+    <Folder Include="application\kavijat\" />
+    <Folder Include="application\kayttis\" />
+    <Folder Include="application\selain\" />
     <Folder Include="application\sivu\" />
     <Folder Include="application\templates\auth\" />
     <Folder Include="application\templates\yhteenveto\" />
     <Folder Include="application\templates\visits\" />
     <Folder Include="application\visits\" />
     <Folder Include="application\static\" />
-    <Folder Include="application\static\content\" />
+    <Folder Include="application\static\css\" />
     <Folder Include="application\static\fonts\" />
     <Folder Include="application\static\scripts\" />
     <Folder Include="application\templates\" />
@@ -107,7 +131,6 @@
     <Content Include="application\templates\yhteenveto\kyselyvuodessa.html" />
     <Content Include="application\templates\yhteenveto\valinta.html" />
     <Content Include="requirements.txt" />
-    <Content Include="application\templates\demo.html" />
     <Content Include="application\templates\index.html" />
     <Content Include="application\templates\layout.html" />
   </ItemGroup>

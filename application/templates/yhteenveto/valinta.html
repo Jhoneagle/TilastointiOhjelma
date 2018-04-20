@@ -4,9 +4,11 @@
 
 {% block body %}
 
-<li><a href="{{ url_for('yhteenveto_vuodessa') }}">Kävijöitä vuodessa</a></li>
+<h2>Yhteenvetoja statistiikasta</h2>
 
-<li><a href="{{ url_for('yhteenveto_ryhmatulos') }}">Kävijöitä sivuryhmässä</a></li>
+<li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_vuodessa') }}">Kävijöitä vuodessa</a></li>
+
+<li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_ryhmatulos') }}">Kävijöitä sivuryhmässä</a></li>
 
 
 {% endblock %}

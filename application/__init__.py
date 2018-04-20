@@ -22,6 +22,13 @@ from application.visits import views
 from application.auth import models
 from application.auth import views
 
+from application.kavijat import models
+from application.kavijat import views
+
+from application.selain import models
+
+from application.kayttis import models
+
 from application.yhteenveto import views
 
 from application.auth.models import User

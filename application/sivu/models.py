@@ -10,6 +10,7 @@ class Sivu(Base):
     ryhma = db.Column(db.String(144), nullable=False)
 
     visit = db.relationship("Visit", backref='sivu')
+    kavijat = db.relationship("Kavijat", backref='sivu')
 
     def __init__(self, osoite, osoiteRyhma):
         self.osoite = osoite

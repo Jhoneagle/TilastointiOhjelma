@@ -49,7 +49,7 @@ def auth_personal():
     if request.method == "POST":
         newform = PersonalForm(request.form)
         if not newform.validate():
-            return render_template("auth/registerform.html", form = form)
+            return render_template("auth/personal.html", form = newform)
         stmt = text("UPDATE account SET name = :name, phonenumber = :number, email = :email, company = :company, address = :address, password = "+
 ":password WHERE id = :id").params(name=newform.name.data, number=newform.phonenumber.data, email=newform.email.data, 
 company=newform.company.data, address=newform.address.data, password=newform.password.data, id=current_user.id)
