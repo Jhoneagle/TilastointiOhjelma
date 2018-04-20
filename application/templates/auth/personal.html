@@ -1,14 +1,14 @@
-{% extends "layout.html" %}
+Ôªø{% extends "layout.html" %}
 
 {% block content %}
 
 {% block body %}
 
-<h2>K‰ytt‰j‰n hallinnointi</h2>
+<h2>K√§ytt√§j√§n hallinnointi</h2>
 
 <form method="POST" action="{{ url_for('auth_personal') }}">
     {{ form.hidden_tag() }}
-    
+
     <div class="col-md-3 mb-3">
         <div class="form-group">{{ form.name.label }}: {{ form.name(class="form-control") }}</div>
         {% for error in form.name.errors %}
