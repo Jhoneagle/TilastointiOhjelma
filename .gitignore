@@ -495,3 +495,7 @@ venv.bak/
 
 webdata.db
 Tietokantakaavio.docx
+TilastointiOhjelma.pyproj
+ptvs_virtualenv_proxy.py
+web.config
+web.debug.config

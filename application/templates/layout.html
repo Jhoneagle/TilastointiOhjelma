@@ -8,42 +8,188 @@
     <title>{{ title }}</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <style>
+        html {
+	        font-family: Arial, Helvetica, sans-serif;
+	        font-size: 0.95em;
+
+	        scrollbar-face-color: #3a7e36;
+	        scrollbar-shadow-color: #ffffff;
+	        scrollbar-highlight-color: #3a7e36;
+	        scrollbar-3dlight-color: #ffffff;
+	        scrollbar-darkshadow-color: #3a7e36;
+	        scrollbar-track-color: #ffffff;
+	        scrollbar-arrow-color: #ffffff;
+	        background-color: black;
+        }
+
+        body {
+	        background-color: black;
+	        background-repeat: no-repeat;  
+        }
+
+        /*navi */
+        .bg-dark {
+            background-color:transparent!important;
+	        background-repeat: no-repeat;  
+            border: solid white 0px;	
+            padding-left: 70px;	
+        }
+
+        /*nvain otsikko väri */
+        .navbar-brand {
+            color:#b4b4b4!important;
+            text-indent: -9000px;
+        }
+
+        /*nvain alkupää */
+        .nav-item {
+            background-color:transparent!important;
+	        border: solid white 0px;
+        }
+
+        /*nvain alkupää fontin väri */
+        .nav-item a:link {
+            color:#b4b4b4!important;
+        }
+
+        .nav-item a:visited {
+            color:#b4b4b4!important;
+        }
+
+        .nav-item a:hover {
+            color:white!important;
+        }
+
+        /*nvain loppupää */
+        .form-inline {
+            background-color:transparent!important;
+        }
+
+        /*nvain loppupää fontin väri */
+        .form-inline a:link {
+            color:#b4b4b4!important;
+        }
+
+        /*nvain loppupää fontin väri */
+        .form-inline a:hover {
+            color:white!important;
+            text-decoration: none;
+        }
+
+        /*tekstialue */
+        .container {
+            top: 100px;
+	        background-repeat: no-repeat;  
+	        color: #b4b4b4;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+	        font-size: 120%;
+	        font-weight: bold;
+	        color: #b4b4b4;
+	        margin-top: 95px;
+	        margin-bottom: 10px;
+	        text-align: left;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+	        font-size: 100%;
+	        color: #b4b4b4;
+	        margin-top: 10px;
+	        margin-bottom: 10px;
+	        text-align: left;
+        }
+
+        /*select label */
+        .form-group {
+            background-color:transparent!important;
+            color:#b4b4b4!important;
+        }
+
+        /*select valikon värit */
+        .form-control {
+            background-color:black!important;
+            color:#b4b4b4!important;
+        }
+
+        /*buttonin väri */
+        .btn-primary {
+            background-color:transparent!important;
+        }
+
+        tr.vari:hover {  
+	        background-color:#fdfde2;  
+	        color: #fff;
+        }
+
+        tr:hover {  
+	        background-color:#fdfde2;  
+	        color: #fff;
+        }
+
+        caption {  
+	        font-size: 110%;  
+	        font-weight: bold;  
+	        margin: 1em 0;
+        }
+
+        col {  
+	        border-right: 0px solid #ccc;
+        }
+
+        th, td {  
+	        padding: 0.1em;
+        }
+
+        thead tr:hover {  
+	        background-color: transparent;  
+	        color: inherit;
+        }
+
+        .bar {	
+            min-width: 800px;	
+            max-width: 1500px;
+        }
+    </style>
 </head>
 
 <body>
-
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-        <a class="navbar-brand" href="#">Statistiikka sovellus</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('visit_index') }}">List visits</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('visits_form') }}">Add a visit</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('companys') }}">Companys</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url_for('yhteenveto_alku') }}">Summarys</a>
-                </li>
-            </ul>
-            <div class="form-inline mt-2 mt-md-0">
-                {% if current_user.is_authenticated %}
-                <a href="{{ url_for('auth_logout') }}">Hello {{ current_user.name }} -- Logout</a>
-                <p>&emsp; &emsp;</p>
-                <a href="{{ url_for('auth_personal') }}">edit account?</a>
-                {% else %}
-                <a href="{{ url_for('auth_login') }}">Login</a>
-                {% endif %}
+    <div class="bar">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+            <a class="navbar-brand" href="#">Statistiikka sovellus</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('visit_index') }}">List visits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('visits_form') }}">Add a visit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('companys') }}">Companys</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('yhteenveto_alku') }}">Summarys</a>
+                    </li>
+                </ul>
+                <div class="form-inline mt-2 mt-md-0">
+                    {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('auth_logout') }}">Hello {{ current_user.name }} -- Logout</a>
+                    <p>&emsp; &emsp;</p>
+                    <a href="{{ url_for('auth_personal') }}">edit account?</a>
+                    {% else %}
+                    <a href="{{ url_for('auth_login') }}">Login</a>
+                    {% endif %}
+                </div>
             </div>
-        </div>
-    </nav>
-
+        </nav>
+    </div>
     <main role="main" class="container">
         {% block body %}{% endblock %}
     </main>
