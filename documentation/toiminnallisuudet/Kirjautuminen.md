@@ -1,0 +1,1 @@
+﻿Mahdollisuus rekistöröityä ja kirjautua olemissa olevilla tunnuksilla. Myös mahdollisuus muokata tietoja jotka rekistöröityessä on antanut. Ja halutessaan voi poistaa koko tunnuksen.

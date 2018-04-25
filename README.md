@@ -10,11 +10,11 @@ toimiva sovellus löytyy [herokusta](https://statistiikkaohjelma.herokuapp.com/)
 
 ## User Storyt
 
-[Kirjautuminen](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Kirjautuminen.txt)
+[Kirjautuminen](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Kirjautuminen.md)
 
-[Visitit](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Vertailu.txt)
+[Visitit](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Vertailu.md)
 
-[Yhteenvedot](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Yhteenveto.txt)
+[Yhteenvedot](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Yhteenveto.md)
 
 ## Kaaviot
 

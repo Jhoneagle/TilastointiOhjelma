@@ -1,4 +1,4 @@
-Kerätty pitkään monien kuukausien edestä vuosien ajalta tietoa kuinka monta kertaa sivuston kaikilla sivuilla on käyty. Kun nämä on lisätty tietokantaan lisäys ominaisuuden kuatta, niin voidaan vertailla eri vuosien käyntimääriä saman kuukauden aikana. 
+﻿Kerätty pitkään monien kuukausien edestä vuosien ajalta tietoa kuinka monta kertaa sivuston kaikilla sivuilla on käyty. Kun nämä on lisätty tietokantaan lisäys ominaisuuden kuatta, niin voidaan vertailla eri vuosien käyntimääriä saman kuukauden aikana. 
 
 Tärkeintä vertailusta saatava hyöty on, että sivujen haltija pystyy näkemään kuinka kuinka niiden sivujen käyntimäärät ovat kehittyneet valittujen vuosien kysytyn kuukauden osalta. Halutaan tietää vuoden tai useamman välinen kehitys kuukauden käynneissä. Mistä voi olla paljon hyötyä yritykselle.
 
