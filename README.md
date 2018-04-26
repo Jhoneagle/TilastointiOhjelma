@@ -12,7 +12,7 @@ toimiva sovellus löytyy [herokusta](https://statistiikkaohjelma.herokuapp.com/)
 
 [Kirjautuminen](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Kirjautuminen.md)
 
-[Visitit](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Vertailu.md)
+[Visitit](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Visits.md)
 
 [Yhteenvedot](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Yhteenveto.md)
 
