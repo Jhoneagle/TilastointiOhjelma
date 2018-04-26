@@ -16,6 +16,8 @@ toimiva sovellus löytyy [herokusta](https://statistiikkaohjelma.herokuapp.com/)
 
 [Yhteenvedot](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Yhteenveto.md)
 
+[Ensikaynnit](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/toiminnallisuudet/Ensikaynnit.md)
+
 ## Kaaviot
 
 [Tietokantakaavio](https://github.com/Jhoneagle/TilastointiOhjelma/blob/master/documentation/kaaviot/Tietokantakaavio.pdf)
