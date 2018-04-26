@@ -6,10 +6,15 @@
 
 <h2>Yhteenvetoja statistiikasta</h2>
 
-<li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_vuodessa') }}">Kävijöitä vuodessa</a></li>
+<ul>
+    <li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_vuodessa') }}">Käyntejä vuodessa</a></li>
 
-<li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_ryhmatulos') }}">Kävijöitä sivuryhmässä</a></li>
+    <li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_ryhmatulos') }}">Käyntejä sivuryhmässä</a></li>
+    
+    <li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_selaimia') }}">selaimia käynyt</a></li>
 
+    <li class="list-group-item" style="border: none"><a href="{{ url_for('yhteenveto_kavijoita') }}">Kävijöitä sivuilla vuodessa</a></li>
+</ul>
 
 {% endblock %}
 

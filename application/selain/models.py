@@ -5,7 +5,7 @@ class Selain(Base):
     
     __tablename__ = "selain"
 
-    kavijat_id = db.Column(db.Integer, db.ForeignKey('kavijat.id'))
+    kavijat_id = db.Column(db.Integer, nullable=False)
 
     kaynnit = db.Column(db.Integer, nullable=False)
     selain = db.Column(db.String(144), nullable=False)

@@ -15,7 +15,7 @@ class RegisterForm(FlaskForm):
     address =  StringField("osoite",[validators.length(1, 1000, "lisää osoite")])
 
     username = StringField("Username",[validators.length(1, 1000, "lisää tunnus")])
-    password = PasswordField("Password",[validators.length(1, 1000, "lisää salasana")])
+    password = PasswordField("Password",[validators.length(6, 1000, "salasanan täytyy olla vähintään kuusi merkkiä")])
 
 class PersonalForm(FlaskForm):
     name =  StringField("nimi",[validators.length(1, 1000, "lisää nimi")])
@@ -25,5 +25,5 @@ class PersonalForm(FlaskForm):
     company =  StringField("yritys",[validators.length(1, 1000, "lisää yrityksen nimi")])
     address =  StringField("osoite",[validators.length(1, 1000, "lisää osoite")])
 
-    password = StringField("Password",[validators.length(1, 1000, "lisää salasana")])
+    password = StringField("Password",[validators.length(6, 1000, "salasanan täytyy olla vähintään kuusi merkkiä")])
     

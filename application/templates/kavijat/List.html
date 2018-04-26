@@ -1,0 +1,23 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+<h2>Kavijoita: </h2>
+<br />
+<form method="POST" action="{{ url_for('kavijat_listaus') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="col-md-3 mb-3">
+        <div class="form-group">{{ form.vuosi.label }}: {{ form.vuosi(class="form-control") }}</div>
+    </div>
+    <br />
+    <div class="col-md-3 mb-3">
+        <div class="form-group">{{ form.kuukausi.label }}: {{ form.kuukausi(class="form-control") }}</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Listaa</button>
+</form>
+{% endblock %}
+
+{% endblock %}

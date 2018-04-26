@@ -11,9 +11,6 @@ class Kavijat(Base):
     vuosi = db.Column(db.String(144), nullable=False)
     kuukausi = db.Column(db.String(144), nullable=False)
 
-    kayttis = db.relationship("Kayttis", backref='kaivjat')
-    selain = db.relationship("Selain", backref='kaivjat')
-
     def __init__(self, kaynnit, vuosi, kuukausi):
         self.kaynnit = kaynnit
         self.vuosi = vuosi

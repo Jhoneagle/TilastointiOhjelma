@@ -1,0 +1,36 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+<h2>Käynnit</h2>
+
+<table class="table">
+    <thead thead-light>
+        <tr>
+            <th>Saavuttu sivu</th>
+            <th>Kaynnit</th>
+            <th>Selain</th>
+            <th>Käyttöjärjestelmä</th>
+            <th>Poista</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tulos in tulokset %}
+        <tr>
+            <td>{{ tulos.tulosivu }}</td>
+            <td>{{ tulos.kaynnit }}</td>
+            <td>{{ tulos.selain }}</td>
+            <td>{{ tulos.kayttis }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('kavija_poisto', kavijat_id=tulos.id) }}">
+                    <input type="submit" class="btn btn-primary" value="Poista" />
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% endblock %}

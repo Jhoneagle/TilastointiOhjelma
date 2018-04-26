@@ -5,7 +5,7 @@ class Kayttis(Base):
     
     __tablename__ = "kayttis"
 
-    kavijat_id = db.Column(db.Integer, db.ForeignKey('kavijat.id'))
+    kavijat_id = db.Column(db.Integer, nullable=False)
 
     kaynnit = db.Column(db.Integer, nullable=False)
     kayttis = db.Column(db.String(144), nullable=False)

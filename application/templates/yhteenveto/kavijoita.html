@@ -1,0 +1,28 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+
+<h2>Kavijoita vuodessa</h2>
+
+<table class="table">
+    <thead thead-light>
+        <tr>
+            <th>Osoite</th>
+            <th>Kokonais lukumaara vuoden aikana</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tulos in kavijat %}
+        <tr>
+            <td>{{ tulos.osoite }}</td>
+            <td>{{ tulos.maara }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% endblock %}

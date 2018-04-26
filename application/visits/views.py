@@ -17,7 +17,7 @@ def visits_create():
     form = VisitForm(request.form)
     
     if not form.validate():
-        return render_template("visits/new.html", form = form)
+        return render_template("visits/new.html", form = form, title="Add visit")
 
     result = Sivu.query.filter_by(osoite=form.osoite.data).first()
     

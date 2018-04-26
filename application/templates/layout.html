@@ -118,15 +118,21 @@
         /*buttonin väri */
         .btn-primary {
             background-color:transparent!important;
+            border: 2px solid #4CAF50;
+        }
+
+        .btn-primary:hover {
+            border: 2px solid #4CAF50;
+            color:#4CAF50;
         }
 
         tr.vari:hover {  
-	        background-color:#fdfde2;  
+	        background-color: transparent;  
 	        color: #fff;
         }
 
         tr:hover {  
-	        background-color:#fdfde2;  
+	        background-color: transparent;  
 	        color: #fff;
         }
 
@@ -150,8 +156,24 @@
         }
 
         .bar {	
-            min-width: 800px;	
+            min-width: 800px;
             max-width: 1500px;
+        }
+
+        .list-group-item {
+            background-color: transparent;
+        }
+
+        a {
+            color:#b4b4b4!important;
+        }
+
+        a:visited {
+            color:#b4b4b4!important;
+        }
+
+        a:hover {
+            color:white!important;
         }
     </style>
 </head>
@@ -172,6 +194,12 @@
                         <a class="nav-link" href="{{ url_for('visits_form') }}">Add a visit</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('kavijat_listaus') }}">List kavijat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('kavija_lisays') }}">Add kavija</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('companys') }}">Companys</a>
                     </li>
                     <li class="nav-item">
@@ -180,7 +208,8 @@
                 </ul>
                 <div class="form-inline mt-2 mt-md-0">
                     {% if current_user.is_authenticated %}
-                    <a href="{{ url_for('auth_logout') }}">Hello {{ current_user.name }} -- Logout</a>
+                    <p>Hello {{ current_user.name }} -- </p>
+                    <a href="{{ url_for('auth_logout') }}">Logout</a>
                     <p>&emsp; &emsp;</p>
                     <a href="{{ url_for('auth_personal') }}">edit account?</a>
                     {% else %}
