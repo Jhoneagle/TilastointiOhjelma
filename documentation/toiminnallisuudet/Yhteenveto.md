@@ -1,5 +1,7 @@
-﻿Käyttäjä pystyy tarkastelemaan yhteenvetoa visiteista kahdella tavalla.
+﻿Ensimmäisessä pystyy näkemään jokaisen sivun koko vuoden yhteis käyntimäärä. Minkä avulla voi nähdä muun muassa, mikä sivu on ollut käydyin eli suosituin. Tämä tieto autaa siinä, kun päätetään, minkä sivun ulkoasuun pitää panostaa eniten ja tehdä myös kiinnostavin. Jotta kävijät tulevat myhemminkin uudestaan. Suosio eli käyntien määrä myös kertoo missä sivulla on onnistuttu saamaan aktiivisesti porukkaa.
 
-Ensimmäisessä pystyy näkemään jokaisen sivun koko vuoden yhteis käyntimäärä. Minkä avulla voi nähdä muun muassa, mikä sivu on ollut käydyin eli suosituin. Tämä tieto autaa siinä, kun päätetään, minkä sivun ulkoasuun pitää panostaa eniten ja tehdä myös kiinnostavin. Jotta kävijät tulevat myhemminkin uudestaan. Suosio eli käyntien määrä myös kertoo missä sivulla on onnistuttu saamaan aktiivisesti porukkaa.
+Toinen on missä voi nähdä kävijoiden määrän tietyn vuoden tiettynä kuukautena jokaisessa sivu ryhmässä. Mistä voi saada tietoa millainen aihe piiri sivustolla kiinnostaa kävijöitä eniten sivu kategorioiden osalta.
 
-Toinen on missä voi nähdä kävijoiden määrän tietyn vuoden tiettynä kuukautena jokaisessa sivu ryhmässä. Mistä voi saada tietoa millainen aihe piiri sivustolla kiinnostaa kävijöitä eniten sivu kategorioiden osalta. 
+selain yhteenvedossa käyttäjä pystyy näkemään kuinka paljon mitäkin selainta kävijät ovat käyttäneet tullessaa heidän sivuilleen vuoden aikana. Jolloin siitä voi tehdä havaintoja mikä selain on ihmisten eniten käyttämä ja jota sivujen täytyy ainakin tukea. Siitä voi myös nähdä, jos jotakin vanhaa selainta on pakko tukea johtuen sen käyttäjä määrästä vai voiko tuen siltä poistaa.
+
+Yhteenvedoissa käyttäjä voi myös nähdä mille sivuille on tullut eniten ihmisiä muunmuassa hakukoneiden kautta. Mikä kertoo paljon siitä millä sivuill on paras näkyvyys ihmisille ja hakukoneille. Myös samalla näkee mikä on vähiten puoleensa vetävä sivu, koska silloin tietää, että sitä pitää parannella. 
