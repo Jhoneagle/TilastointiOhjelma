@@ -57,10 +57,10 @@ def kavija_lisays():
 @login_required
 def kavijat_listaus():
     if request.method == 'POST':
-        form = ListKayntiForm(request.form)
+        form = InMonthForm(request.form)
         stmt = text("SELECT kavijat.id AS id, kayttis.kayttis AS kayttis, selain.selain AS selain, kavijat.kaynnit AS kaynnit, sivu.osoite AS tulosivu "+
 "FROM kavijat, selain, kayttis, sivu WHERE kavijat.id = kayttis.kavijat_id AND kavijat.id = selain.kavijat_id AND kavijat.kuukausi = :month AND kavijat.vuosi = :year "+
-"AND kavijat.sivu_id = sivu.id AND sivu.account_id = :id").params(month=form.kuukausi.data, year=form.vuosi.data, id=current_user.id)
+"AND kavijat.sivu_id = sivu.id AND sivu.account_id = :id").params(month=form.month.data, year=form.year.data, id=current_user.id)
         
         result = db.engine.execute(stmt)
         return render_template("kavijat/Result.html", title="Result", tulokset=result)
