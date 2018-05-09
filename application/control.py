@@ -5,4 +5,4 @@ from application import app
 
 @app.route('/')
 def home():
-    return render_template("index.html", title='Index')
+    return render_template("index.html", title='Pääsivu')

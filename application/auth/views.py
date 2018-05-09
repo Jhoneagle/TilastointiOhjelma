@@ -16,7 +16,7 @@ def auth_login():
     user = User.query.filter_by(username=form.username.data, password=form.password.data).first()
     if not user:
         return render_template("auth/loginform.html", form = form,
-                               error = "No such username or password")
+                               error = "virheellinen käyttäjätunnus tai salasana.")
 
 
     login_user(user)
@@ -36,6 +36,11 @@ def auth_register():
     
     if not form.validate():
         return render_template("auth/registerform.html", form = form)
+    
+    result = User.query.filter_by(username=form.username.data).first()
+
+    if result != None:
+        return render_template("auth/registerform.html", form = form, invalid = "käyttäjänimi on jo varattu")
     
     u = User(form.name.data, form.phonenumber.data, form.email.data, form.company.data, form.address.data, form.username.data, form.password.data)
     db.session().add(u)
