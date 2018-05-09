@@ -5,11 +5,13 @@
 {% block body %}
 <h2>Käynnit</h2>
 
+<p>Kuukauden kävijät sivuilla.</p>
+
 <table class="table">
     <thead thead-light>
         <tr>
-            <th>Saavuttu sivu</th>
-            <th>Kaynnit</th>
+            <th>Sivu</th>
+            <th>Kävijöitä</th>
             <th>Selain</th>
             <th>Käyttöjärjestelmä</th>
             <th>Poista</th>
@@ -23,8 +25,8 @@
             <td>{{ tulos.selain }}</td>
             <td>{{ tulos.kayttis }}</td>
             <td>
-                <form method="POST" action="{{ url_for('kavija_poisto', kavijat_id=tulos.id) }}">
-                    <input type="submit" class="btn btn-primary" value="Poista" />
+                <form method="POST" action="{{ url_for('kavija_poisto', visitor_id=tulos.id) }}">
+                    <input type="submit" class="btn btn-primary" onclick="show_kayntiConfirm()" value="Poista" />
                 </form>
             </td>
         </tr>

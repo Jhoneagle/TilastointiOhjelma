@@ -4,13 +4,13 @@
 
 {% block body %}
 
-<li class="list-group-item" style="border: none"><a href="{{ url_for('auth_register') }}">Rekistöröitynyt?</a></li>
+<li class="list-group-item"><a href="{{ url_for('auth_register') }}">Rekistöröitynyt?</a></li>
 
 <br />
 
-<span style="color: red;">{{error}}</span>
+<span class="error">{{error}}</span>
 
-<br /><h2> Kirjaudu</h2><br />
+<h2> Kirjaudu</h2><br />
 
 <form method="POST" action="{{ url_for('auth_login') }}">
     {{ form.hidden_tag() }}

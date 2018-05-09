@@ -6,10 +6,12 @@
 
 <h2>Hae sivujen vuotinen tulos</h2>
 
+<p>Kävijöiden määrä sivuilla vuodessa.</p>
+
 <form method="POST" action="{{ url_for('yhteenveto_kavijoita') }}">
 
     <div class="col-md-3 mb-3">
-        <div class="form-group">{{ form.vuosi.label }}: {{ form.vuosi(class="form-control") }}</div>
+        <div class="form-group">{{ form.year.label }}: {{ form.year(class="form-control") }}</div>
     </div>
 
     <button type="submit" class="btn btn-primary">Hae</button>

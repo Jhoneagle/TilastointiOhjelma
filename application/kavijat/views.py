@@ -16,7 +16,7 @@ def kavija_lisays():
         form = VisitorForm(request.form)
     
         if not form.validate():
-            return render_template("kavijat/uusiTulija.html", title="Lisää uusi tietue kävijöitä", form = form)
+            return render_template("kavijat/newVisitor.html", title="Lisää uusi tietue kävijöitä", form = form)
 
         result = Sivu.query.filter_by(osoite=form.website.data).first()
     
@@ -51,7 +51,7 @@ def kavija_lisays():
 
         return redirect(url_for("kavijat_listaus"))
     else:
-        return render_template("kavijat/uusiTulija.html", title="Lisää uusi tietue kävijöitä", form = VisitorForm())
+        return render_template("kavijat/newVisitor.html", title="Lisää uusi tietue kävijöitä", form = VisitorForm())
 
 @app.route("/kavijat/listaus/", methods=["GET", "POST"])
 @login_required

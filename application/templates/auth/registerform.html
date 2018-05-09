@@ -6,7 +6,7 @@
 
 <h2>Rekistöröidy</h2>
 
-{{ invalid }}
+<span class="error">{{ invalid }}</span>
 
 <form method="POST" action="{{ url_for('auth_register') }}">
     {{ form.hidden_tag() }}
@@ -14,20 +14,20 @@
     <div class="col-md-3 mb-3">
         <div class="form-group">{{ form.name.label }}: {{ form.name(class="form-control") }}</div>
         {% for error in form.name.errors %}
-        <span style="color: red;">{{error}}</span>
+        <span class="error">{{error}}</span>
         {% endfor %}
     </div>
     <div class="form-row">
         <div class="col-md-3 mb-3">
             <div class="form-group">{{ form.phonenumber.label }}: {{ form.phonenumber(class="form-control") }}</div>
             {% for error in form.phonenumber.errors %}
-            <span style="color: red;">{{error}}</span>
+            <span class="error">{{error}}</span>
             {% endfor %}
         </div>
         <div class="col-md-3 mb-3">
             <div class="form-group">{{ form.email.label }}: {{ form.email(class="form-control") }}</div>
             {% for error in form.email.errors %}
-            <span style="color: red;">{{error}}</span>
+            <span class="error">{{error}}</span>
             {% endfor %}
         </div>
     </div>
@@ -35,13 +35,13 @@
         <div class="col-md-3 mb-3">
             <div class="form-group">{{ form.company.label }}: {{ form.company(class="form-control") }}</div>
             {% for error in form.company.errors %}
-            <span style="color: red;">{{error}}</span>
+            <span class="error">{{error}}</span>
             {% endfor %}
         </div>
         <div class="col-md-3 mb-3">
             <div class="form-group">{{ form.address.label }}: {{ form.address(class="form-control") }}</div>
             {% for error in form.address.errors %}
-            <span style="color: red;">{{error}}</span>
+            <span class="error">{{error}}</span>
             {% endfor %}
         </div>
     </div>
@@ -49,13 +49,13 @@
         <div class="col-md-3 mb-3">
             <div class="form-group">{{ form.username.label }}: {{ form.username(class="form-control") }}</div>
             {% for error in form.username.errors %}
-            <span style="color: red;">{{error}}</span>
+            <span class="error">{{error}}</span>
             {% endfor %}
         </div>
         <div class="col-md-3 mb-3">
             <div class="form-group">{{ form.password.label }}: {{ form.password(class="form-control") }}</div>
             {% for error in form.password.errors %}
-            <span style="color: red;">{{error}}</span>
+            <span class="error">{{error}}</span>
             {% endfor %}
         </div>
     </div>

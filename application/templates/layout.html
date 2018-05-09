@@ -162,6 +162,7 @@
 
         .list-group-item {
             background-color: transparent;
+            border: none;
         }
 
         a {
@@ -174,6 +175,10 @@
 
         a:hover {
             color:white!important;
+        }
+
+        .error {
+            color: red;
         }
     </style>
 </head>
@@ -188,32 +193,32 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('visit_index') }}">List visits</a>
+                        <a class="nav-link" href="{{ url_for('visit_index') }}">Listaa kuukauden käynnit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('visits_form') }}">Add a visit</a>
+                        <a class="nav-link" href="{{ url_for('visits_form') }}">Lisää kuukauden käynnit</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('kavijat_listaus') }}">List kavijat</a>
+                        <a class="nav-link" href="{{ url_for('kavijat_listaus') }}">Listaa kuukauden kävijät</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('kavija_lisays') }}">Add kavija</a>
+                        <a class="nav-link" href="{{ url_for('kavija_lisays') }}">Lisää kuukauden kävijät</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('companys') }}">Companys</a>
+                        <a class="nav-link" href="{{ url_for('companys') }}">Käyttäjien edustamat yritykset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url_for('yhteenveto_alku') }}">Summarys</a>
+                        <a class="nav-link" href="{{ url_for('yhteenveto_alku') }}">Yhteenvedot</a>
                     </li>
                 </ul>
                 <div class="form-inline mt-2 mt-md-0">
                     {% if current_user.is_authenticated %}
                     <p>Hello {{ current_user.name }} -- </p>
-                    <a href="{{ url_for('auth_logout') }}">Logout</a>
+                    <a href="{{ url_for('auth_logout') }}">Kirjaudu ulos</a>
                     <p>&emsp; &emsp;</p>
-                    <a href="{{ url_for('auth_personal') }}">edit account?</a>
+                    <a href="{{ url_for('auth_personal') }}">Muokkaa käyttäjää?</a>
                     {% else %}
-                    <a href="{{ url_for('auth_login') }}">Login</a>
+                    <a href="{{ url_for('auth_login') }}">Kirjaudu</a>
                     {% endif %}
                 </div>
             </div>
@@ -222,6 +227,23 @@
     <main role="main" class="container">
         {% block body %}{% endblock %}
     </main>
+
+    <script type="text/javascript">
+        function show_userConfirm() {
+            var r=confirm("Haluatko varmasti poistaa käyttäjätunnuksen?");
+            if (r==true) {                   
+            }
+            else {                    
+            }
+        }
+        function show_kayntiConfirm() {
+            var r = confirm("Haluatko varmasti poistaa tämän tiedon?");
+            if (r == true) {
+            }
+            else {
+            }
+        }
+    </script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

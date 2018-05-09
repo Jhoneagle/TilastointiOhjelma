@@ -3,21 +3,24 @@
 {% block content %}
 
 {% block body %}
-<h2>kahden vuoden saman kuukauden vertailu: </h2>
+<h2>kahden vuoden vertailu</h2>
+
+<p>Kahden vuoden saman kuukauden sivuilla käyntien vertailu</p>
+
 <br />
 <form method="POST" action="{{ url_for('visits_result') }}">
     {{ form.hidden_tag() }}
 
     <div class="col-md-3 mb-3">
-        <div class="form-group">{{ form.vuosi.label }}: {{ form.vuosi(class="form-control") }}</div>
+        <div class="form-group">{{ form.year.label }}: {{ form.year(class="form-control") }}</div>
     </div>
     <br /> <p>vuosi johon verrataan</p> <br />
     <div class="col-md-3 mb-3">
-        <div class="form-group">{{ form.vuosi2.label }}: {{ form.vuosi2(class="form-control") }}</div>
+        <div class="form-group">{{ form.year2.label }}: {{ form.year2(class="form-control") }}</div>
     </div>
     <br />
     <div class="col-md-3 mb-3">
-        <div class="form-group">{{ form.kuukausi.label }}: {{ form.kuukausi(class="form-control") }}</div>
+        <div class="form-group">{{ form.month.label }}: {{ form.month(class="form-control") }}</div>
     </div>
     
     <button type="submit" class="btn btn-primary">Listaa</button>

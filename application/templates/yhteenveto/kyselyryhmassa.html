@@ -4,16 +4,16 @@
 
 {% block body %}
 
-<h2>Hae sivuryhmien kokonaistulos</h2>
+<h2>Sivuryhmissä käyneiden määrä kuukauden aikana</h2>
 
 <form method="POST" action="{{ url_for('yhteenveto_ryhmatulos') }}">
 
     <div class="col-md-3 mb-3">
-        <div class="form-group">{{ form.vuosi.label }}: {{ form.vuosi(class="form-control") }}</div>
+        <div class="form-group">{{ form.year.label }}: {{ form.year(class="form-control") }}</div>
     </div>
     <br />
     <div class="col-md-3 mb-3">
-        <div class="form-group">{{ form.kuukausi.label }}: {{ form.kuukausi(class="form-control") }}</div>
+        <div class="form-group">{{ form.month.label }}: {{ form.month(class="form-control") }}</div>
     </div>
 
     <button type="submit" class="btn btn-primary">Hae</button>

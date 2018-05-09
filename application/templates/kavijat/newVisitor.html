@@ -1,0 +1,65 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+{% block body %}
+
+<h2>Käyntien lisäys</h2>
+
+<p>Kuukauden aikana sivulla käyneiden ihmisten määrä tietyn käyttöjärjestelmän ja selaimen yhdistelmällä.</p>
+
+<form method="POST" action="{{ url_for('kavija_lisays') }}">
+    {{ form.hidden_tag() }}
+
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.browser.label }}: {{ form.browser(class="form-control") }}</div>
+            {% for error in form.browser.errors %}
+            <span class="error">{{error}}</span>
+            {% endfor %}
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.systemName.label }}: {{ form.systemName(class="form-control") }}</div>
+            {% for error in form.systemName.errors %}
+            <span class="error">{{error}}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.visitorsAmount.label }}: {{ form.visitorsAmount(class="form-control") }}</div>
+            {% for error in form.visitorsAmount.errors %}
+            <span class="error">{{error}}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.website.label }}: {{ form.website(class="form-control") }}</div>
+            {% for error in form.website.errors %}
+            <span class="error">{{error}}</span>
+            {% endfor %}
+        </div>
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.websiteGroup.label }}: {{ form.websiteGroup(class="form-control") }}</div>
+            {% for error in form.websiteGroup.errors %}
+            <span class="error">{{error}}</span>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.year.label }}: {{ form.year(class="form-control") }}</div>
+        </div>
+        <br />
+        <div class="col-md-3 mb-3">
+            <div class="form-group">{{ form.month.label }}: {{ form.month(class="form-control") }}</div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Lisää</button>
+</form>
+
+{% endblock %}
+
+{% endblock %}
