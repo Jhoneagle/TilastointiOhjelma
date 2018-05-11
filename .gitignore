@@ -494,7 +494,6 @@ venv.bak/
 *.xsd.cs
 
 webdata.db
-Tietokantakaavio.docx
 TilastointiOhjelma.pyproj
 TilastointiOhjelma.sln
 ptvs_virtualenv_proxy.py

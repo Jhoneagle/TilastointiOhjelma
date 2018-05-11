@@ -8,8 +8,8 @@ class Kavijat(Base):
     sivu_id = db.Column(db.Integer, db.ForeignKey('sivu.id'))
 
     kaynnit = db.Column(db.Integer, nullable=False)
-    vuosi = db.Column(db.String(144), nullable=False)
-    kuukausi = db.Column(db.String(144), nullable=False)
+    vuosi = db.Column(db.Integer, nullable=False)
+    kuukausi = db.Column(db.Integer, nullable=False)
 
     def __init__(self, kaynnit, vuosi, kuukausi):
         self.kaynnit = kaynnit
