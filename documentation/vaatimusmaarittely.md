@@ -84,7 +84,7 @@ INSERT INTO sivu (kuukausi, vuosi, lukumaara, sivu_id) VALUES (form.month.data, 
 
 Kahden vuoden käyntien vertailussa sivu käyntien haku: 
 
-Mihin vuoteen verrataan kaikki suv käynnit kuukaudelta
+Mihin vuoteen verrataan kaikki käynnit kuukaudelta
 
 ```
 SELECT * FROM visit, sivu WHERE visit.kuukausi = form.month.data AND visit.vuosi = form.year.data AND visit.sivu_id = sivu.id AND sivu.account_id = current_user.id;
