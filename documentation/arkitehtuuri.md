@@ -36,4 +36,4 @@ Manuaalista käynnistystä varten oleellinen python tiedosto kuitenkin on [runse
 * Ohjelma ei sivuta listauksia, kun on kyse suuresta määrästä dataa.
 * Se ei myöskään sisällä takaisin painiketta vaikkakin se ei myöskään ole kaikialla edes välttämätön nopean uudelleen pääsyn takia. 
 * Käynti tietoja ei pysty poistamaan.
-* Mitään lisättyjä tetueita ei voi myöskään muokata, joten kävijä tietojen muokkaus tapahtuu poistamalla ja uudelleen lisäämällä. 
+* Mitään lisättyjä tietueita ei voi myöskään muokata, joten kävijä tietojen muokkaus tapahtuu poistamalla ja uudelleen lisäämällä. 
