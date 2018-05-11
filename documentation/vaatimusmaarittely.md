@@ -102,11 +102,11 @@ Pystyy lisäämään tietoa siitä kuinka monta tietyllä käyttöjärjestelmän
 
 Pystyy listaamaan tietyn kuukauden kävijöiden määrät kaikilta sivuilta, jolloin pystyy näkemään kuinka paljon ihmisiä on käynyt sivuilla ilman evästeitä eli mikä on luultavasti todellinen määrä ihmisiä sivuilla kuukauden aikana. 
 
+#### kyselyt
+
 Kuukauden kävijämäärää lisättäessä: 
 
 Haetaan onko nettisivu jo lisätty
-
-#### kyselyt
 
 ```
 SELECT * FROM sivu WHERE osoite = form.website.data;
